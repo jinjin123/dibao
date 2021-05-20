@@ -1,0 +1,30 @@
+<section id="os-wrapper">
+    <div class="faq-node-all">
+    {# {% trans %} #}
+      {% for item in node.field_faq_question %}
+        <!-- healthtips_short_descripti start   -->
+        {# {{ item.entity.translation(language).field_healthtips_short_descripti.value|raw }} #}
+         {# {{ item.entity.translation(language).field_content.value|raw }}  #}
+         
+        {# {{ item.entity.translation(language).field_content.value|raw }}  #}
+         {{ item.entity.field_content.value|raw }} 
+
+        <!-- healthtips_short_descripti end-->
+          
+        <!-- body start -->
+        {# {{ item.entity.translation(language).field_healthtips_body.value| check_markup(item.entity.field_healthtips_body.format) }} #}
+        {# {{ item.entity.translation(language).field_short_desciption.value| check_markup(item.entity.field_short_desciption.format) }} #}
+        {{ item.entity.field_short_desciption.value| check_markup(item.entity.field_short_desciption.format) }}
+        <!-- body end -->
+   
+  <!-- body end -->
+          <!-- healthtips_details start -->
+        {# {{ item.entity.translation(language).field_healthtips_details.value| check_markup(item.entity.field_healthtips_details.format) }} #}
+        <!-- healthtips_details end -->
+
+      {% endfor %}
+      {# {% endtrans %} #}
+    </div>
+
+
+  </section>

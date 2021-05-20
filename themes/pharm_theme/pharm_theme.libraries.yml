@@ -1,0 +1,45 @@
+slick:
+  css:
+    theme:
+      node_modules/slick-carousel/slick/slick.css: {}
+      node_modules/slick-carousel/slick/slick-theme.css: {}
+  js:
+    node_modules/slick-carousel/slick/slick.min.js: {}
+  dependencies:
+    - core/jquery
+
+
+loadsh:
+  js:
+    dist/js/lodash.js: {}
+  dependencies:
+    - core/jquery
+
+healthtips:
+  js:
+    js/healthtips.js: {}
+  dependencies:
+    - core/jquery
+
+global:
+  css:
+    theme:
+      https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css: {}
+      node_modules/normalize.css/normalize.css: {}
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: {}
+      dist/css/timeline.css: {}
+      dist/css/sidebar.css: {}
+      dist/css/jquery.fancybox.css: {}
+      dist/css/style.css: {}
+
+  js:
+    https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js: {}
+    js/timeline.js: {}
+    dist/js/jquery.fancybox.pack.js: {}
+    dist/js/jquery.nicescroll.min.js: {}
+    js/app.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - pharm_theme/slick

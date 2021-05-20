@@ -1,0 +1,49 @@
+@import '../variable';
+
+#footer {
+  .container-fluid-40{
+    overflow: hidden;
+    margin: 20px 0 25px 0;
+  }
+  .copyright{
+    float: left;
+    line-height: 14px;
+    p {
+      height: 14px;
+      line-height: 14px;
+      margin: 0;
+    }
+  }
+  .footer-link{
+    float: right;
+    ul{
+       overflow: hidden;
+      list-style-type: none;
+      li{
+        float: left;
+        height: 14px;
+        line-height: 14px;
+        border-left: 1px solid black;
+        a {
+          padding: 0 10px;
+          height: 14px;
+          line-height: 14px;
+          margin: 0;
+        }
+        p {
+          height: 14px;
+          line-height: 14px;
+          margin: 0;
+        }
+        &:first-child{
+          border: 0;
+        }
+      }
+    }
+  }
+}
+.homepage {
+  #footer {
+    border: 0;
+  }
+}

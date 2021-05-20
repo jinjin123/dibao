@@ -1,0 +1,175 @@
+{% set mobile_menu = simplify_menu('main') %}
+<div class="layout-container homepage">
+
+  {# Mobile menu #}
+  {% if mobile_menu %}
+    <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+      {{ elements.pharm_theme_main_menu }}
+      {% if language == 'en' %}
+        {% set active_en = 'active' %}
+      {% endif %}
+      {% if language == 'zh-hant' %}
+        {% set active_cht = 'active' %}
+      {% endif %}
+      {% if language == 'zh-hans' %}
+        {% set active_chs = 'active' %}
+      {% endif %}
+      <ul id="lang-sidebar" class="nav navbar-nav">
+        <li class="{{active_chs}}"><a href="/cht{{ current_url }}">繁</a></li>
+        <li class="{{active_cht}}"><a href="/chs{{ current_url }}">简</a></li>
+        <li class="{{active_en}}"><a href="/eng{{ current_url }}">ENG</a></li>
+      </ul>
+      <ul id="social-icon-sidebar" class="nav">
+        <li><a href="https://www.facebook.com/Fortune.Pharmacal" target="_blank" class="fb-icon"></a></li>
+        <li><a href="http://weibo.com/fortunepharmacal" target="_blank" class="weibo-icon"></a></li>
+        <li><a href="https://www.youtube.com/user/FortunePharmHK" target="_blank" class="youtube-icon"></a></li>
+      </ul>
+      <ul class="nav sidebar-nav">
+        {% for menu_item in mobile_menu.menu_tree %}
+          {% set active_trail = '' %}
+          {% if menu_item.active_trail or menu_item.active %}
+            {% set active_trail = 'active' %}
+          {% endif %}
+          {% if menu_item.submenu %}
+            {% if menu_item.url == '' %}
+              <li class="parent nolink {{active_trail}}" id="{{menu_item.options.attributes.class}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+            {% else %}
+              <li class="parent {{active_trail}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+            {% endif %}
+          {% else %}
+          {% if menu_item.text == "其他服务范围" %}
+               {% set menu_url = menu_item.url ~ "?lang=zh_cn" %}
+            {% elseif menu_item.text == "其他服務範圍" %}
+              {% set menu_url = menu_item.url ~ "?lang=zh" %}
+            {% else %}
+                {% set menu_url = menu_item.url %}
+            {% endif %}
+            <li class="{{active_trail}}">
+            <a href="{{ menu_url }}" class="" title="{{ menu_item.text|t }}" target="{{menu_item.options.attributes.target}}">{{ menu_item.text|t }}</a>
+          {% endif %}
+          {% if menu_item.submenu %}
+            <ul class="sub-sidebar-nav">
+              <li>
+                <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}" target="{{menu_item.options.attributes.target}}">{{ menu_item.text|t }}</a>
+              </li>
+              {% for sub_menu_item in menu_item.submenu %}
+                <li>
+                  <a href="{{ sub_menu_item.url }}" title="{{ sub_menu_item.text|t }}" target="{{sub_menu_item.options.attributes.target}}">{{ sub_menu_item.text|t }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </li>
+          <div id="menuEnd"></div>
+        {% endfor %}
+      </ul>
+      <ul id="linkage-icon-sidebar" class="nav navbar-nav"></ul>
+    </nav>
+  {% endif %}
+  {# Mobile menu #}
+
+  <header id="header" class="navbar">
+    <div class="container-fluid">
+      <div class="container-fluid-40">
+        {{ page.header }}
+      </div>
+    </div>
+  </header>
+
+  <div id="wrapper">
+  <main class="body" role="main">
+    <div class="banner">
+      {{ page.banner }}
+    </div>
+    <div class="container-fluid">
+      <div class="desktop-main main-wrapper hidden-xs">
+        <div class="col-sm-9-4 row-sm-9-4">
+          {{ page.home_page_top_one }}
+        </div>
+        <div class="col-sm-9-3 row-sm-9-4">
+          {{ page.home_page_top_two }}
+        </div>
+        <div class="col-sm-9-2 row-sm-9-4">
+          {{ page.home_page_top_three }}
+        </div>
+        <div class="col-sm-9-3 row-sm-9-1">
+          {{ page.home_page_bottom_one }}
+        </div>
+        <div class="col-sm-9-3 row-sm-9-1">
+          {{ page.home_page_bottom_two }}
+        </div>
+        <div class="col-sm-9-3 row-sm-9-1">
+          {{ page.home_page_bottom_three }}
+        </div>
+      </div>
+      {# Mobile #}
+      <div class="mobile-main main-wrapper visible-xs">
+        <div class="col-xs-12 row-xs-12 nopadding">
+           {{ drupal_view('homepage_slider', 'block_1') }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {# block 10 #}
+          {{ drupal_entity('block_content', 10) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {# block 11 #}
+          {{ drupal_entity('block_content', 11) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {# block 12 #}
+          {{ drupal_entity('block_content', 12) }}
+        </div>
+        <div class="col-xs-8 row-xs-4 nopadding">
+          {# block 13 #}
+          {{ drupal_entity('block_content', 13) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {# block 14 #}
+          {{ drupal_entity('block_content', 14) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {# block 15 #}
+          {{ drupal_entity('block_content', 15) }}
+        </div>
+        <div class="col-xs-8 row-xs-4 nopadding">
+          {# block 16 #}
+          {{ drupal_entity('block_content', 16) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {# block 17 #}
+          {{ drupal_entity('block_content', 17) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {# block 18 #}
+          {{ drupal_entity('block_content', 18) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {# block 19 #}
+          {{ drupal_entity('block_content', 19) }}
+        </div>
+        <div class="col-xs-12 row-xs-4 nopadding">
+          {# block 20 #}
+          {{ drupal_entity('block_content', 20) }}
+        </div>
+        <div class="col-xs-12 row-xs-4 nopadding">
+          {# block 21 #}
+          {{ drupal_entity('block_content', 21) }}
+        </div>
+        <div class="col-xs-12 row-xs-4 nopadding">
+          {# block 22 #}
+          {{ drupal_entity('block_content', 22) }}
+        </div>
+      </div>
+      {# Mobile #}
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo" id="footer">
+    <div class="container-fluid">
+      <div class="container-fluid-40">
+        {{ page.footer }}
+      </div>
+    </div>
+  </footer>
+  </div>
+</div>

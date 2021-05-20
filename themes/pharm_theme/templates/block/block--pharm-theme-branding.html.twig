@@ -1,0 +1,16 @@
+{% if language == 'en' %}
+  {% set URL = '/eng' %}
+{% endif %}
+{% if language == 'zh-hant' %}
+  {% set URL = '/chs' %}
+{% endif %}
+{% if language == 'zh-hans' %}
+  {% set URL = '/cht' %}
+{% endif %}
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ URL }}" title="{{ 'Home'|t }}" rel="{{ 'Home'|t }}">
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+    </a>
+  {% endif %}
+{% endblock %}

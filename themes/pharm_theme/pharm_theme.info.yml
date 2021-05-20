@@ -1,0 +1,28 @@
+core: 8.x
+type: theme
+
+name: 'pharm_theme'
+description: 'Theme'
+
+regions:
+  header: 'Header'
+  sub_menu: 'Sub menu'
+  home_page: 'Home page'
+  home_page_top_one: 'Home page top one'
+  home_page_top_two: 'Home page top two'
+  home_page_top_three: 'Home page top three'
+  home_page_bottom_one: 'Home page bottom one'
+  home_page_bottom_two: 'Home page bottom two'
+  home_page_bottom_three: 'Home page bottom three'
+  product_left: 'Product page left'
+  product_right: 'Product page right'
+  banner: 'Banner'
+  page_title: 'Page Title'
+  page_banner: 'Page Banner'
+  content: 'Content'
+  content_bottom: 'Content Bottom'
+  navigation: 'Navigation'
+  footer: 'Footer'
+
+libraries:
+  - pharm_theme/global

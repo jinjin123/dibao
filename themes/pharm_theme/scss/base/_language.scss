@@ -1,0 +1,80 @@
+@import '../variable';
+// Eng = lang-eng
+// Cht = lang-zh-hans
+// Chs = lang-zh-hant
+body.lang-zh-hans {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic";
+  h3 {
+    font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic";
+  }
+}
+// For English Pages
+.lang-en {
+  .main-wrapper {
+    .index-wrapper {
+      .link-wrapper {
+        span {
+          font-size: 1.2em;
+          top: 30%;
+        }
+      }
+      &:hover {
+        span {
+          top: 15%;
+        }
+      }
+    }
+  }
+}
+.lang-en.path-faq {
+  .sub-tab-outer-wrapper {
+     height: 70px;
+    li {
+      a {
+        height: 70px;
+      }
+    }
+  }
+}
+// For Chs Pages
+body.lang-zh-hant {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic";
+}
+
+.lang-en.path-product {
+  .market-tab-wrapper {
+    a {
+      width: 145px;
+    }
+    width: 435px;
+  }
+  .sub-tab-outer-wrapper {
+    height: 70px;
+  }
+  .sub-tab-wrapper {
+    width: 945px;
+    li {
+      a {
+        height: 70px;
+        width: 135px;
+      }
+    }
+  }
+  .product-content-wrapper.product-content2 {
+    >ul {
+      >li {
+        height: 70px;
+      }
+    }
+  }
+}
+.sidebar-nav {
+  li {
+    a {
+      width: 130px;
+    }
+    &.parent:before{
+      right: 30px;
+    }
+  }
+}
