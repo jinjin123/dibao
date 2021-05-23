@@ -10,6 +10,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
  * Implements hook_help().
  */
 function pharma_custom_help($route_name, RouteMatchInterface $route_match) {
+  kint($route_name);
   switch ($route_name) {
     case 'help.page.pharma_custom':
       $output = '';
@@ -57,3 +58,4 @@ function pharma_custom_views_query_alter(Drupal\views\ViewExecutable $view, Drup
   }
   // Condtion End
 }
+

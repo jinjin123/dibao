@@ -45,6 +45,7 @@ core/phpunit.xml
 .idea/*
 themes/c2017/.sass-cache/*
 themes/c2018/.sass-cache/*
+themes/pharm_theme/node_modules
 
 # OS generated files #
 ######################

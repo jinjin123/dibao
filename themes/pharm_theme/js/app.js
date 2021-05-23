@@ -1058,7 +1058,7 @@ Drupal.behaviors.PharmaTheme = {
                 }, {
                     "11": 46
                 }]
-                //获取显示症状和显示药品的方法 
+                //获取显示症状和显示药品的方法
             function get_display_symptoms_product_id(input_symptoms) {
                 var all_product_id_display = []
                 var all_symptoms_id_display = []
@@ -1360,4 +1360,16 @@ Drupal.behaviors.PharmaTheme = {
         }
         /*privacy */
     }
+};
+Drupal.behaviors.loadBgImg = {
+  attach: function (context, settings) {
+    console.log($('.lazyload[data-original]').length);
+    $('.lazyload[data-original]').each(function () {
+      var el = $(this);
+      var img = el.data('original');
+      el.css({
+        'background-image': 'url("' + img + '")'
+      })
+    })
+  }
 };
