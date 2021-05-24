@@ -1359,17 +1359,39 @@ Drupal.behaviors.PharmaTheme = {
 
         }
         /*privacy */
+      $(".wc-faq__item__body").css("display", "none")
+      var faqflag = true;
+      $(".wc-faq .row .wc-faq__item").click(function () {
+        var target = $(this);
+        if (faqflag) {
+          target.find('.wc-faq__item__body ').show();
+          target.find('.wc-faq__item__titile').css({
+            "background": "url(/themes/pharm_theme/images/arrow-up.png)no-repeat ",
+            "background-size": "15px auto",
+            "background-position": "100% 30%",
+          });
+          faqflag = false;
+        } else {
+          target.find('.wc-faq__item__body ').hide();
+          target.find('.wc-faq__item__titile').css({
+            "background": "url(/themes/pharm_theme/images/arrow-down.png)no-repeat ",
+            "background-size": "15px auto",
+            "background-position": "100% 30%",
+          });
+          faqflag = true;
+        }
+      });
     }
 };
-Drupal.behaviors.loadBgImg = {
-  attach: function (context, settings) {
-    console.log($('.lazyload[data-original]').length);
-    $('.lazyload[data-original]').each(function () {
-      var el = $(this);
-      var img = el.data('original');
-      el.css({
-        'background-image': 'url("' + img + '")'
-      })
-    })
-  }
-};
+// Drupal.behaviors.loadBgImg = {
+//   attach: function (context, settings) {
+//     console.log($('.lazyload[data-original]').length);
+//     $('.lazyload[data-original]').each(function () {
+//       var el = $(this);
+//       var img = el.data('original');
+//       el.css({
+//         'background-image': 'url("' + img + '")'
+//       })
+//     })
+//   }
+// };

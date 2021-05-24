@@ -1844,6 +1844,23 @@ body.lang-zh-hant {
     top: 0;
     display: none; }
 
+.wc-faq-header {
+  padding: 20px; }
+
+.wc-faq__title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 30px; }
+
+.wc-faq__item__titile {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222222;
+  background: url(/themes/pharm_theme/images/arrow-down.png) no-repeat;
+  background-size: 15px auto;
+  background-position: 100% 30%; }
+
 /*product-children*/
 .path-product #block-productchilderenbanner {
   display: none; }

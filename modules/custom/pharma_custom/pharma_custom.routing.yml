@@ -1,0 +1,7 @@
+pharma_custom.faq_controller_index:
+  path: '/faq'
+  defaults:
+    _controller: '\Drupal\pharma_custom\Controller\FaqController::index'
+    _title: 'Faq'
+  requirements:
+    _permission: 'access content'

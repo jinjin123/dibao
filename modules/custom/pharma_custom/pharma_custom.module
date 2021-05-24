@@ -58,4 +58,17 @@ function pharma_custom_views_query_alter(Drupal\views\ViewExecutable $view, Drup
   }
   // Condtion End
 }
+function pharma_custom_theme()
+{
+  return [
+    'pharma_custom' => [
+      'render element' => 'children',
+    ],
+    'pharma_faq' => [
+      'variables' => [
+        'variables' => []
+      ]
+    ],
+  ];
+}
 
