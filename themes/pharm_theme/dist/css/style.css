@@ -3481,3 +3481,18 @@ nav#block-mainnavigation #menu li a {
 
 .page-node-3 #block-historybottomcontent-2 .field-type-text-with-summary #company-timeline {
   margin-bottom: 0; }
+
+.pbt_bg {
+  background-color: black;
+  height: 300px;
+  margin-bottom: 10px; }
+  .pbt_bg .pbt_rt {
+    padding-top: 30px; }
+  .pbt_bg .pbt_lt {
+    padding-top: 30px; }
+  .pbt_bg h1 {
+    color: #0fd2b2; }
+  .pbt_bg h4 {
+    color: #0fd2b2; }
+  .pbt_bg p {
+    color: #999; }
